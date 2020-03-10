@@ -1,0 +1,820 @@
+@font-face {
+  font-family: 'lato';
+  src: url(./fonts/lato-v16-latin-700.woff) format('woff');
+  src: url(./fonts/lato-v16-latin-700.woff2) format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'lato-reg';
+  src: url(./fonts/lato-v16-latin-regular.woff) format('woff');
+  src: url(./fonts/lato-v16-latin-regular.woff2) format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'montserrat-600';
+  src: url(./fonts/montserrat-v13-latin-600.woff) format('woff');
+  src: url(./fonts/montserrat-v13-latin-600.woff2) format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'montserrat-700';
+  src: url(./fonts/montserrat-v13-latin-700.woff) format('woff');
+  src: url(./fonts/montserrat-v13-latin-700.woff2) format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+
+.navigation {
+  margin: 0 auto;
+    background-color: #373c3f;
+    height: 40px;
+    width: 320px;
+}
+
+.navigation__p {
+    font-size: 14px;
+    margin: 0;
+    margin-left: 18px;
+    padding: 14px 0 0 0;
+    color: #949799;
+}
+
+#menu__toggle {
+    opacity: 0;
+  }
+  /* стилизуем кнопку */
+  .menu__btn {
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: -43px;
+    left: 278px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 1;
+  }
+  /* добавляем "гамбургер" */
+  .menu__btn > span,
+  .menu__btn > span::before,
+  .menu__btn > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #ffffff;
+  }
+  .menu__btn > span::before {
+    content: '';
+    top: -8px;
+  }
+  .menu__btn > span::after {
+    content: '';
+    top: 8px;
+  }
+
+  /* контейнер меню */
+.menu__box {
+  display: block;
+  position: relative;
+  visibility: hidden;
+  left: -100%;
+  width: 200px;
+  height: 100%;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+  box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+}
+  
+  /* элементы меню */
+  .menu__item {
+    display: block;
+    padding-top: 4px;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .menu__box:hover {
+    background-color: #CFD8DC;
+  }
+
+  #menu__toggle:checked ~ .menu__btn > span {
+    transform: rotate(45deg);
+  }
+  #menu__toggle:checked ~ .menu__btn > span::before {
+    top: 0;
+    transform: rotate(0);
+  }
+  #menu__toggle:checked ~ .menu__btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+  }
+  #menu__toggle:checked ~ .menu__box {
+    visibility: visible;
+    top: -35px;
+    left: 160px;
+    background-color: #fafafa;
+    width: 183px;
+    height: 160px;
+  }
+
+.menu__box--li {
+  text-align: left;
+  height: 26px;
+  border: 1px solid #f1f1f1;
+  padding: 4px 0 0 14px;
+}
+
+.menu__box--li:hover {
+  background-color: #f5f5f5;
+}
+ 
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  transition-duration: .25s;
+}
+.menu__box {
+  transition-duration: .25s;
+}
+.menu__item {
+  font-family: 'lato-reg';
+  font-size: 12px;
+  color: #757575;
+  text-decoration: none;
+  transition-duration: .25s;
+}
+
+.header {
+  margin: 0 auto;
+  width: 320px;
+  background-image: url(./img/320/photo-1.png);
+  background-repeat: no-repeat;
+  height: 172px;
+  margin-bottom: 4px;
+}
+
+.header__p {
+  margin: 0;
+  padding: 14px 0 10px 20px;
+  color: #d8d7d7;
+  font-size: 16px;
+  font-family: 'lato';
+}
+.header__p--add {
+  margin: 0;
+  padding-left: 20px;
+  color: #d8d7d7;
+  font-size: 16px;
+  font-family: 'lato';
+}
+
+.header__link {
+  color: #a6d6e0;
+  font-size: 14px;
+  padding: 4px 0 0 20px;
+  font-family: 'lato';
+}
+
+.section__div {
+  height: 75px;
+  margin-bottom: 2px;
+}
+
+
+.section__div--1 {
+  background-image: url(./img/320/photo-1.1.png);
+  background-repeat: no-repeat;
+}
+.section__div--2 {
+  background-image: url(./img/320/photo-1.2.png);
+  background-repeat: no-repeat;
+}
+.section__div--3 {
+  background-image: url(./img/320/photo-1.3.png);
+  background-repeat: no-repeat;
+}
+
+.section__p {
+  color: #ffffff;
+  font-size: 20px;
+  margin: 0;
+  padding: 20px 0 0 64px;
+  font-family: 'lato';
+}
+
+.products {
+  width: 70px;
+  margin: 0;
+  height: 76px;
+  background-color: #acd8ad;
+  position: relative;
+  top: -44px;
+  right: -250px;
+}
+
+.arrow {
+  border: solid #ffffff;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  margin-top: 30px;
+  margin-left: 22px;
+}
+
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.menu__h2 {
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-size: 17px;
+  margin-top: 26px;
+  color: #3f4043;
+  font-family: 'lato-reg';
+}
+
+.menu__ul {
+  margin-left: 30px;
+}
+
+.menu__p {
+  padding: 4px 0 12px 30px;
+  font-size: 12px;
+  color: #d2d3d5;
+  font-family: 'lato-reg';
+}
+
+.menu__item--div {
+  background-color: #3f4043;
+  height: 36px;
+}
+
+.menu__item--p {
+  font-size: 20px;
+  color: #acd8ad;
+  text-transform: uppercase;
+  padding: 6px 0 0 34px;
+  font-family: 'lato-reg';
+}
+
+.menu__grid {
+  width: 285px;
+  margin: 0 auto;
+}
+
+.menu__grid--p {
+  font-size: 15px;
+  text-transform: uppercase;
+  font-family: 'lato-reg';
+  color: #8c8c8e;
+  padding: 20px 0 0 28px;
+  background-image: url(./img/320/photo-2.1.png);
+  background-position: right;
+  background-repeat: no-repeat;
+  height: 34px;
+}
+
+.image {
+  position: relative;
+  top: -24px;
+  right: -284px;
+}
+
+.main {
+  margin: 0 auto;
+  width: 320px;
+}
+
+.menu__ul--li {
+  font-size: 14px;
+  color: #8c8c8e;
+  padding: 0 0 12px;
+  font-family: 'lato-reg';
+}
+.navigation__ul {
+  display: none;
+}
+
+.menu__ul--span {
+  padding-left: 108px;
+  font-family: 'lato';
+}
+
+.menu__ul--span-1 {
+  padding-left: 86px;
+}
+.menu__ul--span-2 {
+  padding-left: 40px;
+}
+.menu__ul--span-3 {
+  padding-left: 56px;
+}
+
+.menu__ul--p {
+  font-size: 9px;
+  padding-top: 10px;
+  font-family: 'lato-reg';
+}
+
+.menu__grid--p-wine {
+  background-image: url(./img/320/photo-2.2.png);
+}
+.menu__title {
+  height: 36px;
+  background-color: #acd8ad;
+}
+
+.menu__title--h2 {
+  font-size: 20px;
+  color: #ffffff;
+  text-transform: uppercase;
+  padding: 6px 0 0 42px;
+  height: 36px;
+}
+
+.menu__grid--p--coffee {
+  background-image: url(./img/320/photo-2.3.png);
+}
+.menu__grid--p--beer {
+  background-image: url(./img/320/photo-2.4.png);
+}
+
+.footer {
+  margin: 0 auto;
+  width: 320px;
+  height: 55px;
+  text-align: center;
+  color: #ffffff;
+  background-color: #acd8ad;
+  font-size: 12px;
+  font-family: 'montserrat-600';
+}
+
+.footer__p {
+  padding-top: 10px;
+}
+
+@media (min-width: 321px) {
+  
+  .navigation {
+    height: 74px;
+    width: 640px;
+  }
+  .navigation__p {
+    font-size: 24px;
+    font-family: 'montserrat-600';
+    margin-left: 40px;
+    padding: 28px 0 0 0;
+    color: #ffffff;
+  }
+
+  #menu__toggle:checked ~ .menu__box {
+    top: -29px;
+    left: 457px;;
+  }
+
+  .menu__box {
+    width: 244px;
+    height: 214px;
+  }
+
+  .menu__item {
+    font-size: 14px;
+  }
+
+  .menu__btn {
+    top: -50px;
+    left: 600px;
+  }
+
+  .header {
+    background-image: url(./img/640/photo_640_1.png);
+    height: 343px;
+    width: 640px;
+  }
+
+  .header__p {
+    padding: 30px 0 14px 40px;
+    font-size: 36px;
+  }
+
+  .header__p--add {
+    font-size: 36px;
+    padding-left: 40px;
+    line-height: 0.9;
+  }
+
+  .header__link {
+    font-size: 24px;
+    padding: 34px 0 0 40px;
+    display: block;
+  }
+
+  .main {
+    width: 640px;
+    margin-bottom: 108px;
+  }
+
+  .section__div {
+    height: 150px;
+  }
+
+  .section__div--1 {
+    background-image: url(./img/640/photo_640_1.1.png);
+  }
+
+  .section__div--2 {
+    background-image: url(./img/640/photo_640_1.2.png);
+  }
+
+  .section__div--3 {
+    background-image: url(./img/640/photo_640_1.3.png);
+  }
+
+  .products {
+    width: 140px;
+    height: 150px;
+    right: -500px;
+    top: -101px;
+  }
+  
+  .arrow {
+    border-width: 0 2px 2px 0;
+    padding: 5px;
+    margin-top: 58px;
+    margin-left: 60px;
+  }
+
+  .section__p {
+  font-size: 34px;
+  padding: 60px 0 0 136px;
+  }
+
+  .menu__h2 {
+    font-size: 40px;
+    font-weight: 500;
+  }
+
+  .menu__p {
+    font-size: 24px;
+    padding: 12px 0 24px 24px;
+  }
+
+  .menu__item--div {
+    height: 75px;
+  }
+
+  .menu__item--p {
+    padding: 12px 0 22px 38px;
+    font-size: 40px;
+  }
+
+  .menu__grid {
+    width: 568px;
+  }
+
+  .menu__grid--p {
+    font-size: 30px;
+    background-image: url(./img/640/photo_640_2.1.png);
+    padding: 38px 0 48px 10px;
+    color: #3f4043;
+  }
+
+  .menu__ul--li {
+    font-size: 27px;
+    color: #3f4043;
+  }
+
+  .menu__ul--p {
+    font-size: 18px;
+    padding-top: 15px;
+    color: #3f4043;
+  }
+
+  .menu__ul--span {
+    padding-left: 274px;
+    color: #3f4043;
+  }
+  .menu__ul--span-1 {
+    padding-left: 232px;
+  }
+  .menu__ul--span-2 {
+    padding-left: 145px;
+  }
+  .menu__ul--span-3 {
+    padding-left: 179px;
+  }
+  .menu__ul {
+    margin-left: 10px;
+}
+  .menu__grid--p-wine {
+    background-image: url(./img/640/photo_640_2.2.png);
+  }
+  .menu__title {
+    height: 75px;
+  }
+  .menu__title--h2 {
+    font-size: 40px;
+    padding: 12px 0 0 38px;
+  }
+  .menu__grid--p--coffee {
+    background-image: url(./img/640/photo_640_2.3.png);
+  }
+  .menu__grid--p--beer {
+    background-image: url(./img/640/photo_640_2.4.png);
+  }
+  .footer {
+    height: 97px;
+    width: 640px;
+    font-size: 18px;
+  }
+  .footer__p {
+    padding: 29px 0 12px;
+  }
+}
+
+@media (min-width: 641px) {
+  .navigation {
+    height: 98px;
+    width: 980px;
+    background-image: url(./img/980/navigation-logo.png);
+    background-repeat: no-repeat;
+    background-position-x: 850px;
+    background-position-y: 6px;
+  }
+  .navigation__p {
+    display: none;
+  }
+  .navigation__ul {
+    display: flex;
+    list-style: none;
+    text-transform: uppercase;
+  }
+  .navigation__ul--li {
+    padding: 40px 0 0 32px;
+  }
+  .hamburger-menu {
+    display: none;
+  }
+  .menu__item{
+    font-size: 15px;
+    color: #ffffff;
+    font-family: 'montserrat-600';
+  }
+  .header {
+    width: 980px;
+    height: 530px;
+    background-image: url(./img/980/photo_980.png);
+  }
+  .header__p {
+    padding: 66px 0 28px 30px;
+    font-size: 54px;
+  }
+.header__p--add {
+  font-size: 54px;
+  padding-left: 30px;
+  }
+  .header__link {
+    font-size: 34px;
+    padding: 38px 0 0 34px;
+}
+.main {
+  width: 980px;
+  margin-bottom: 85px;
+}
+.products {
+  display: none;
+}
+.section__div--1 {
+  background-image: url(./img/980/photo_980_1.1.png);
+}
+.section__div--2 {
+  background-image: url(./img/980/photo_980_1.2.png);
+}
+.section__div--3 {
+  background-image: url(./img/980/photo_980_1.3.png);
+}
+.section__div {
+  height: 326px;
+  width: 327px;
+}
+.main__sectionOne {
+  display: flex;
+}
+.section__p {
+  padding: 0;
+  font-size: 38px;
+  text-align: center;
+  padding-top: 144px;
+}
+.menu {
+  background-image: url(./img/980/Menu\ logo.png);
+  background-repeat: no-repeat;
+  background-position: 850px 0px;
+}
+.menu__h2 {
+  font-size: 34px;
+  text-align: left;
+  margin: 50px 0 0 32px;
+}
+.menu__p {
+  font-size: 20px;
+  padding: 12px 0 24px 32px;
+}
+.menu__sectionBlack {
+  width: 490px;
+}
+.menu__sectionLigthGreen {
+  width: 490px;
+}
+.menu__grid {
+  width: 490px;
+}
+.menu__sectionBig {
+  display: flex;
+}
+.menu__item--p {
+  font-size: 34px;
+  padding: 12px 0 22px 20px;
+}
+.menu__grid--p {
+  font-size: 26px;
+  background-position: 420px 28px;
+  background-image: url(./img/980/photo_980_2.1.png);
+}
+.menu__grid--p-wine {
+  background-image: url(./img/980/photo_980_2.3.png);
+}
+.menu__grid--p--coffee {
+  background-image: url(./img/980/photo_980_2.2.png);
+}
+.menu__grid--p--beer {
+  background-image: url(./img/980/photo_980_2.4.png);
+}
+.menu__ul--li {
+  font-size: 24px;
+}
+.menu__ul--p {
+  font-size: 16px;
+}
+.menu__ul--span {
+  padding-left: 200px;
+}
+.menu__ul--span-1 {
+  padding-left: 162px;
+}
+.menu__ul--span-2 {
+  padding-left: 90px;
+}
+.menu__ul--span-3 {
+  padding-left: 120px;
+}
+.menu__ul {
+  margin-left: 24px;
+}
+.menu__title--h2 {
+  font-size: 34px;
+  margin: 0;
+  padding: 12px 0 22px 20px;
+}
+.footer {
+  height: 97px;
+  width: 980px;
+  background-image: url(./img/980/navigation-logo.png);
+  background-repeat: no-repeat;
+  background-position: 30px 8px;
+}
+.footer__p {
+  display: inline-block;
+  padding: 42px 0 0 280px;
+}
+.footer__p--item {
+  display: inline-block;
+}
+}
+@media (min-width: 981px) {
+  .navigation {
+    width: 1200px;
+    background-image: url(./img/1200/navigation-logo.png);
+    background-position-x: 1070px;
+  }
+  .header {
+    width: 1200px;
+    height: 648px;
+    background-image: url(./img/1200/header-fon.png);
+  }
+  .header__p {
+    padding: 60px 0 20px 30px;
+    font-size: 62px;
+  }
+  .header__p--add {
+    font-size: 62px;
+  }
+  .header__link {
+    font-size: 38px;
+    padding: 54px 0 0 34px;
+}
+.main {
+  width: 1200px;
+  margin-bottom: 134px;
+}
+.section__div {
+  height: 400px;
+  width: 400px;
+}
+.section__div--1 {
+  background-image: url(./img/1200/photo_1200_1.1.png);
+}
+.section__div--2 {
+  background-image: url(./img/1200/photo_1200_1.2.png);
+}
+.section__div--3 {
+  background-image: url(./img/1200/photo_1200_1.3.png);
+}
+.menu {
+  background-image: url(./img/1200/Menu\ logo.png);
+  background-position: 1050px -4px;
+}
+.menu__h2 {
+  font-size: 40px;
+  text-align: left;
+  margin: 76px 0 0 32px;
+}
+.menu__sectionBlack {
+  width: 600px;
+}
+.menu__sectionLigthGreen {
+  width: 600px;
+}
+.menu__item--p {
+  font-size: 40px;
+}
+.menu__grid--p {
+  font-size: 30px;
+  background-image: url(./img/1200/photo_1200_2.1.png);
+}.menu__grid--p-wine {
+  background-image: url(./img/1200/photo_1200_2.2.png);
+}
+.menu__grid--p--coffee {
+  background-image: url(./img/1200/photo_1200_2.3.png);
+}
+.menu__grid--p--beer {
+  background-image: url(./img/1200/photo_1200_2.4.png);
+}
+.menu__ul--li {
+  font-size: 27px;
+}
+.menu__ul--p {
+  font-size: 18px;
+}
+.menu__ul--span {
+  padding-left: 178px;
+}
+.menu__ul--span-1 {
+  padding-left: 138px;
+}
+.menu__ul--span-2 {
+  padding-left: 50px;
+}
+.menu__ul--span-3 {
+  padding-left: 84px;
+}
+.footer {
+  width: 1200px;
+  background-image: url(./img/1200/navigation-logo.png);
+  background-position: 30px 8px;
+}
+.footer__p {
+  padding: 42px 0 0 490px;
+}
+}
